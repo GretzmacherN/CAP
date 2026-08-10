@@ -1,0 +1,11 @@
+name: base
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - conda
+  - mamba[version='>=2.5.0']
+  - pip
+prefix: /Users/gernotstuhler/miniforge3_arm64
