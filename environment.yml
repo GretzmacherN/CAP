@@ -1,11 +1,44 @@
-name: base
+name: CAP
+
 channels:
-  - bioconda
-  - conda-forge
-  - defaults
+    - conda-forge
+    - bioconda
+
 dependencies:
-  - python=3.13
-  - conda
-  - mamba[version='>=2.5.0']
-  - pip
-prefix: /Users/gernotstuhler/miniforge3_arm64
+    - python=3.11
+
+    # Core scientific Python
+    - numpy
+    - pandas
+    - scipy
+    - scikit-learn
+
+    # Single-cell analysis
+    - scanpy
+    - anndata
+
+    # Visualization
+    - matplotlib
+    - seaborn
+
+    # Jupyter
+    - jupyter
+    - notebook
+    - ipykernel
+    - papermill
+
+    # Utilities
+    - psutil
+
+    # HDF5
+    - h5py
+    - hdf5
+
+    # scVI / PyTorch
+    - pytorch
+    - pytorch-lightning
+
+    - pip:
+          - "scvi-tools[metal]"
+          - celltypist
+          - pybiomart
